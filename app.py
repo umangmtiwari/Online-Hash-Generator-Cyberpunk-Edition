@@ -15,8 +15,18 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# AWS Bedrock Client for Claude
-bedrock = boto3.client(service_name="bedrock-runtime")
+# Fetch AWS credentials from environment variables
+aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
+aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
+aws_region = os.getenv("AWS_REGION", "us-east-1")  # Default to us-east-1 if not set
+
+# Initialize Bedrock client with environment variables
+bedrock = boto3.client(
+    service_name="bedrock-runtime",
+    aws_access_key_id=aws_access_key,
+    aws_secret_access_key=aws_secret_key,
+    region_name=aws_region
+)
 
 # In-memory task store to handle chatbot responses
 tasks = {}

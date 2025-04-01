@@ -136,7 +136,4 @@ def get_result(task_id):
 
     return jsonify(task)
 
-if os.getenv("VERCEL"):
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
-else:
-    app.run(debug=True)
+app = app

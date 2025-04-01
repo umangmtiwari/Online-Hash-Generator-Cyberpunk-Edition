@@ -4,7 +4,7 @@ import zlib
 import uuid
 import boto3
 from Crypto.Hash import MD4, MD2, RIPEMD160  # pycryptodome for additional hashing
-from langchain.llms.bedrock import Bedrock
+from langchain_community.llms.bedrock import Bedrock
 from threading import Thread
 import logging
 import os

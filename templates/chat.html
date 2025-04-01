@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Claude AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <button id="backBtn" onclick="window.location.href='/'">⬅ Back</button>
+            <h2>🤖 Claude AI Chat</h2>
+        </div>
+        
+        <div class="messages" id="messages"></div>
+
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Ask me anything..." autocomplete="off"/>
+            <button id="sendBtn">🚀</button>
+        </div>
+
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+</body>
+<footer>
+    <p>💻 Check out the source code on <a href="https://github.com/umangmtiwari/" target="_blank">GitHub</a> 🚀</p>
+</footer>
+</div>
+</html>

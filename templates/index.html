@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator - Cyberpunk Edition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Hash Generator</h1>
+
+        <textarea id="inputText" placeholder="Enter text here..."></textarea>
+
+        <div>
+            <label for="algorithm">Select Hash Algorithm:</label>
+            <select id="algorithm">
+                <option value="md5">MD5</option>
+                <option value="md2">MD2</option>
+                <option value="md4">MD4</option>
+                <option value="sha1">SHA-1</option>
+                <option value="sha256">SHA-256</option>
+                <option value="sha384">SHA-384</option>
+                <option value="sha512">SHA-512</option>
+                <option value="ripemd160">RIPEMD-160</option>
+                <option value="adler32">Adler-32</option>
+                <option value="crc32">CRC-32</option>
+            </select>
+        </div>
+
+        <button id="generateButton">Generate Hash</button>
+        <button id="chatbotButton" onclick="window.location.href='/ask-doubt'">🤖 Ask Doubt</button>
+
+
+        <div id="output">
+            <p><strong>Hash:</strong> <span id="hashResult"></span></p>
+            <button id="copyButton">📋 Copy</button>
+        </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+<footer>
+    <p>💻 Check out the source code on <a href="https://github.com/umangmtiwari/" target="_blank">GitHub</a> 🚀</p>
+</footer>
+
+</div>
+</html>
